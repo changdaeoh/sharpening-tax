@@ -1,0 +1,149 @@
+{
+  "inventory": "260824-0010_scalability_inventory_4fam_scope.json",
+  "sources": {
+    "gemma-4-31B/bfcl/base": [
+      {
+        "file": "gemma-4-31B_base_N128_mtbase.jsonl",
+        "count_cache_sha256": "200979468b56dbbea60cc3ba208f5a7a40dcdc7aed2c311296bda208a522708f"
+      }
+    ],
+    "gemma-4-31B/bfcl/post": [
+      {
+        "file": "gemma-4-31B_rl_N128_mtbase.jsonl",
+        "count_cache_sha256": "95652842fca28f7d4797b4fd4ed0cec49778598c8ae7df837e30c1160226c3ab"
+      }
+    ],
+    "Ministral-3-14B/bfcl/base": [
+      {
+        "file": "Ministral-3-14B_base_N128_mtbase.jsonl",
+        "count_cache_sha256": "9874bfe80e7dc67bbd05839c914a73e8aa4835f1b31977110e10a5c814f605c1"
+      }
+    ],
+    "Ministral-3-14B/bfcl/post": [
+      {
+        "file": "Ministral-3-14B_rl_N128_mtbase.jsonl",
+        "count_cache_sha256": "af8c0c374e65ba1a4c8259b6206fc0ac3568fd24fe590fe57409e11f637ab2cd"
+      }
+    ],
+    "gemma-4-31B/webshop/base": [
+      {
+        "file": "google_gemma-4-31B_harness_pass128_260708-1230.jsonl",
+        "count_cache_sha256": "3b406ddfd9b3d98798edfb147f5fb9cf42aae46dffe84082e0b9e0805b3551d8"
+      }
+    ],
+    "gemma-4-31B/webshop/post": [
+      {
+        "file": "google_gemma-4-31B-it_naive_pass128_260708-1230.jsonl",
+        "count_cache_sha256": "a168b30b9182d84efe4a517df7974f0e665065cce486c9862602c080e7040a8d"
+      }
+    ],
+    "Ministral-3-14B/webshop/base": [
+      {
+        "file": "mistralai_Ministral-3-14B-Base-2512_harness_webshop_pass128_260708-1930_trajectories.jsonl",
+        "count_cache_sha256": "d8e6dbf8b9686078e55aa2796ce8c446f7b1e50398ff17c8da575c2aa4dab87b"
+      }
+    ],
+    "Ministral-3-14B/webshop/post": [
+      {
+        "file": "mistralai_Ministral-3-14B-Instruct-2512_naive_webshop_pass128_260708-1930_trajectories.jsonl",
+        "count_cache_sha256": "87253e802913417f8e3210623097a12e53f64f0e65ab9feee7af6586213a1a95"
+      }
+    ],
+    "gemma-4-31B/acebench/base": [
+      {
+        "file": "google_gemma-4-31B_harness_noser14_pass128_260708-2030_trajectories.jsonl",
+        "count_cache_sha256": "6d73fde38ba74b3333d87843764e3a5a7db10027129fd949723ee1c9f6f1b676"
+      }
+    ],
+    "gemma-4-31B/acebench/post": [
+      {
+        "file": "google_gemma-4-31B-it_naive_noser14_pass128_260708-2030_trajectories.jsonl",
+        "count_cache_sha256": "5c60400b74f1a629e21af88f41a7c3177fca4b9196a1b27173bba3dbc8ccd1a3"
+      }
+    ],
+    "Ministral-3-14B/acebench/base": [
+      {
+        "file": "mistralai_Ministral-3-14B-Base-2512_harness_noser14_pass128_260708-1945_trajectories.jsonl",
+        "count_cache_sha256": "33690924fc103d5e081e6b885fc7a5e6302cea751922019a374fcf0da8b7fc30"
+      }
+    ],
+    "Ministral-3-14B/acebench/post": [
+      {
+        "file": "mistralai_Ministral-3-14B-Instruct-2512_naive_noser14_pass128_260708-1945_trajectories.jsonl",
+        "count_cache_sha256": "e531c9fa9dfcec055b529ccf419178cf044c29f7041d05ce5df4659a8a017c65"
+      }
+    ],
+    "Qwen2.5-32B/bfcl/base": [
+      {
+        "file": "Qwen2.5-32B_base_N128_mtbase.jsonl",
+        "count_cache_sha256": "3a5fb22e43ea7e4b3a2ad3fcb122955f9ee390bc98565a12f748b03141736b39"
+      }
+    ],
+    "Qwen2.5-32B/bfcl/post": [
+      {
+        "file": "Qwen2.5-32B_rl_N128_mtbase.jsonl",
+        "count_cache_sha256": "ef961e1292d173532e4d5e7546c5d91a052f848e1ca7b7713c285dd4debf256b"
+      }
+    ],
+    "Qwen2.5-32B/webshop/base": [
+      {
+        "file": "260807-0300_qwen25_32b_ws_base_pass128_trajectories.jsonl",
+        "count_cache_sha256": "dac344c825a524a1d86d2dc5f836fd149e731835590ef60188957ebc4a49f96c"
+      }
+    ],
+    "Qwen2.5-32B/webshop/post": [
+      {
+        "file": "260807-0300_qwen25_32b_ws_rl_pass128_trajectories.jsonl",
+        "count_cache_sha256": "cbd2864c5f57d060c2247c8b623aeef9f93b17aa90395ab671e74c731eceaff3"
+      }
+    ],
+    "Qwen2.5-32B/acebench/base": [
+      {
+        "file": "Qwen_Qwen2.5-32B_harness_noser770_pass128_260810-0010_trajectories.jsonl",
+        "count_cache_sha256": "d0ea539eb048a5a485faad0c4c080217973ca4f3c8dd5ecd52b589fa60ab394f"
+      }
+    ],
+    "Qwen2.5-32B/acebench/post": [
+      {
+        "file": "Qwen_Qwen2.5-32B-Instruct_naive_noser770_pass128_260810-0010_trajectories.jsonl",
+        "count_cache_sha256": "0972502d5c89645e5a287b6cce4900c33efbf8806b609a9e4eec73f4c94fe12c"
+      }
+    ],
+    "Qwen3.5-35B-A3B/bfcl/base": [
+      {
+        "file": "Qwen3.5-35B-A3B_base_N128_mtbase.jsonl",
+        "count_cache_sha256": "9901fc259852cb02d624dfb4ccb09c2f8d8a65588f9edcf95e750feff1c34474"
+      }
+    ],
+    "Qwen3.5-35B-A3B/bfcl/post": [
+      {
+        "file": "Qwen3.5-35B-A3B_rl_N128_mtbase.jsonl",
+        "count_cache_sha256": "1736c84526d456ec72fb87e8455f1f26f90ec1c114817e3488ff43d5711555ad"
+      }
+    ],
+    "Qwen3.5-35B-A3B/webshop/base": [
+      {
+        "file": "260812-0230_qwen35_35b_a3b_ws_base_pass128_trajectories.jsonl",
+        "count_cache_sha256": "70873e9d18b8bf96558eeb9d5e2f021beee62d3838fc520469d194bbcd2c4755"
+      }
+    ],
+    "Qwen3.5-35B-A3B/webshop/post": [
+      {
+        "file": "260812-0230_qwen35_35b_a3b_ws_rl_pass128_trajectories.jsonl",
+        "count_cache_sha256": "74c1ccb52e7784e713423950956e513284c2161d0445bd81952fae7d9186b245"
+      }
+    ],
+    "Qwen3.5-35B-A3B/acebench/base": [
+      {
+        "file": "Qwen_Qwen3.5-35B-A3B-Base_harness_noser770_pass128_260813-0015_trajectories.jsonl",
+        "count_cache_sha256": "5bc514c6e2588a76b25e5ea0d57db22f40759184ff08aa2e41295179dcd3733a"
+      }
+    ],
+    "Qwen3.5-35B-A3B/acebench/post": [
+      {
+        "file": "Qwen_Qwen3.5-35B-A3B_naive_noser770_pass128_260813-0015_trajectories.jsonl",
+        "count_cache_sha256": "6c679b81df2a201862b5605d93ec7bcd33e186622af59784f99484d56e7a7729"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+Affiliation logos
+
+meta-logo.svg is a vector conversion of assets/logometa.pdf from the user-supplied
+Sharpening Tax paper assets. It identifies the author affiliation near the byline.
+The design and colors are preserved. Meta's logo is a trademark of Meta Platforms;
+the repository's MIT license does not grant rights to that trademark.
+
+Font provenance and notices are in fonts/NOTICE.txt.
+
+uw-madison-logo.svg is the unmodified horizontal color institutional logo from
+UW–Madison's official web/digital logo package:
+https://brand.wisc.edu/resource/uw-institutional-logos-for-web-digital-use/
+https://brand.wisc.edu/content/uploads/2023/10/uw-institutional-logos-web-digital.zip
+
+nyu-logo.png is the NYU logo as used in the user-requested DyT affiliation row:
+https://jiachenzhu.github.io/DyT/webpage_assets/logos/nyu.png
+
+stanford-logo.png is the unmodified cardinal wordmark from Stanford's identity site:
+https://identity.stanford.edu/visual-identity/stanford-logos/wordmarks/
+https://identity.stanford.edu/wp-content/uploads/sites/3/2020/06/wordmark-nospace-red.png
+
+These marks identify the authors' institutional affiliations. They remain the
+property of their respective institutions and are not covered by this repository's
+MIT license. Logos are served locally and retain their original colors.

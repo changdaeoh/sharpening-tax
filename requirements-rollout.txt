@@ -1,0 +1,31 @@
+# Rollout collection (GPU). Tested with Python 3.12 and vLLM 0.19.0
+# (gemma-4-12B / 12B-it need vLLM >= 0.23). Do not pip-install the benchmarks' own pinned
+# requirements into this environment: they pin old vllm / openai / numpy / torch versions.
+# Their runtime dependencies are listed below.
+vllm
+openai>=1.86
+tqdm
+
+# BFCL: bfcl_eval is imported from its source checkout ($BFCL_ROOT), not pip-installed,
+# because its package metadata pins numpy 1.26.
+mpmath==1.3.0
+tenacity
+filelock
+
+# ACEBench
+python-dotenv
+wcwidth
+
+# WebShop (run its setup.sh without the pip / conda lines to build the data and index).
+# pyserini needs Java 21; also run `python -m spacy download en_core_web_lg`.
+gym==0.26.2
+pyserini==2.0.0
+spacy
+thefuzz
+flask
+beautifulsoup4
+cleantext
+rank-bm25
+rich
+selenium
+gdown

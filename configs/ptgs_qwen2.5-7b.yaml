@@ -1,0 +1,99 @@
+# Example RL configuration with PTGS: a record of hyperparameters, not a loadable launcher.
+# RL keys follow RAGEN / verl naming. `ptgs:` is exactly PTGS(**cfg["ptgs"]); `ptgs_integration:`
+# is how the trainer calls it (ptgs/integration.py). Without PTGS, the same recipe samples every
+# rollout at T_ref = 1.0. `grpo:` at the end lists the overrides for a GRPO variant.
+#
+# Backbone: Qwen2.5-7B-Instruct.
+
+# PTGS. The Beta prior (mass 2, at the pivot) and the Thompson draw are fixed, not arguments.
+ptgs:
+  tau: 1.5                    # T_x in [t_ref/tau, tau*t_ref] = [0.667, 1.5]
+  gamma: 0.95                 # forgetting factor
+  t_ref: 1.0                  # must equal actor_rollout_ref.rollout.temperature
+  pivot_start: 0.25           # geometric pivot ramp over trainer.total_training_steps, with
+  pivot_end: 0.5              #   steps 1..200, so the last step sits exactly at pivot_end
+  seed: 1                     # Thompson-sampling RNG
+
+ptgs_integration:
+  logprobs_at_sampling_temperature: true   # the actor divides logits row-wise by T_x
+  success_threshold: 0.5                   # a trajectory succeeds when its return exceeds this
+  update_before_filter: true               # posterior update on the full batch, before StarPO-S
+
+# RL recipe, with or without PTGS: multi-turn PPO with the StarPO-S reward-variance filter.
+algorithm:
+  adv_estimator: gae
+  gamma: 1.0                  # discount
+  lam: 1.0
+  use_kl_in_reward: false
+
+actor_rollout_ref:
+  actor:
+    optim: {lr: 1.0e-6}
+    clip_ratio_low: 0.2       # DAPO-style asymmetric clipping
+    clip_ratio_high: 0.28
+    loss_agg_mode: token-mean
+    entropy_coeff: 0.001
+    use_kl_loss: false
+    ppo_mini_batch_size: 32
+    ppo_epochs: 1
+  rollout:
+    temperature: 1.0          # = ptgs.t_ref; PTGS overrides it per prompt group, in training only
+    # StarPO-S (v2) filter, unrelated to decoding top-p: a nucleus rule over prompts' reward SDs,
+    # not a quantile. Prompts are kept in SD order until their cumulative SD reaches 0.9 of the
+    # total (typically well under 90% of prompts). Zero-SD groups (all-fail / all-success) are
+    # never selected, even with include_zero: true (it only keeps them eligible); hence PTGS
+    # updates its posterior before this filter.
+    rollout_filter_strategy: top_p
+    rollout_filter_value: 0.9
+    rollout_filter_type: largest
+    rollout_filter_include_zero: true
+    val_kwargs:
+      temperature: 0.5        # in-training validation decoder, identical for every arm
+
+critic:
+  optim: {lr: 1.0e-5}
+
+es_manager:
+  train:
+    env_groups: 8             # 8 tasks per step
+    group_size: 16            # 16 rollouts per task => 128 trajectories per step
+    # Addition to stock RAGEN (whose training seeds never repeat): cycle 200 tasks
+    # deterministically, so each recurs every 25 steps (8 visits per run), as PTGS needs.
+    seed_pool_size: 200
+
+custom_envs:
+  CoordFrozenLake:
+    # Binary success reward. Slippery: the intended move happens w.p. 0.8, else it slips to a
+    # perpendicular square (needs a gymnasium FrozenLakeEnv that accepts success_rate). All
+    # rollouts of a task reset with its seed, so they share one stream of slip draws.
+    env_config:
+      is_slippery: true
+      success_rate: 0.8
+  # Sokoban: 6x6 grid, one box, shaped reward; an episode is a success once the box is on target.
+
+agent_proxy:
+  max_turn: 5
+  max_actions_per_turn: 2
+
+trainer:
+  total_training_steps: 200
+  test_freq: 25
+  save_freq: 50
+  val_before_train: false
+  enable_early_stop: false    # addition to stock RAGEN; off, so every run reaches its final step
+
+# Offline evaluation (not a trainer key), per checkpoint, with PTGS off.
+evaluation:
+  checkpoints: [50, 100, 150, 200]
+  tasks: 64
+  rollouts_per_task: 128      # exact pass@k and pass^k for every k <= 128
+  temperature: 0.5            # no top-p / top-k truncation
+  ptgs: false
+
+# GRPO variant: the recipe above with these overrides.
+grpo:
+  algorithm: {adv_estimator: grpo}            # group-relative advantages, no critic
+  actor_rollout_ref: {actor: {entropy_coeff: 0.0}}
+  ptgs:                                       # per environment; other PTGS keys as above
+    sokoban: {tau: 1.4, pivot_start: 0.5, pivot_end: 0.5}       # target fixed at 0.5
+    frozenlake: {tau: 1.2, pivot_start: 0.25, pivot_end: 0.5}

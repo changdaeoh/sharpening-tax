@@ -1,0 +1,18 @@
+Optimistic Text (regular) and Optimistic Display (medium)
+
+Embedded font copyright notice:
+Copyright 2020 Facebook. All rights reserved. This font may not be altered in any
+way without prior permission from Facebook.
+
+These font files are unmodified copies of the public web assets referenced by
+the official Meta blog stylesheet, inspected on 2026-10-01:
+https://static.xx.fbcdn.net/rsrc.php/v5/ya/l/0,cross/-_n5pNoKBKu.css
+
+optimistic-text.woff2:
+https://static.xx.fbcdn.net/rsrc.php/y1/r/WTmi-IDr3ab.woff2
+
+optimistic-display.woff2:
+https://static.xx.fbcdn.net/rsrc.php/yl/r/9cboBe_TxI_.woff2
+
+The repository's MIT license does not apply to these proprietary font files.
+This notice records provenance and does not grant additional font rights.
