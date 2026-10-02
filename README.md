@@ -20,6 +20,7 @@
 <p align="center">
   <a href="https://changdaeoh.github.io/sharpening-tax/"><img src="https://img.shields.io/badge/Project-page-2a9d8f.svg" alt="Project page"></a>
   <a href="https://arxiv.org/abs/2610.01509"><img src="https://img.shields.io/badge/arXiv-2610.01509-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://x.com/Changdae_Oh/status/2105852436602626399"><img src="https://img.shields.io/badge/Twitter-thread-1DA1F2.svg?logo=x&logoColor=white" alt="Twitter"></a>
 </p>
 
 <p align="center"><img src="assets/teaser.png" width="100%" alt="Sharpening Tax in Post-Training"></p>

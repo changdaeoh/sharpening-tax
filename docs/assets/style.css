@@ -52,7 +52,8 @@ h1>span{color:var(--blue)}
 .authors sup{margin-left:2px;color:var(--muted)}
 
 .work-note{font-size:9px;color:var(--muted);margin-top:13px}
-.hero-links{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:22px}
+.hero-links{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px}
+.hero-links>.button{min-width:116px;justify-content:space-between;gap:16px;white-space:nowrap}
 .button{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:39px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:8px 17px;font-size:12px;transition:border-color .2s,background .2s}
 .button:hover{border-color:var(--blue);color:var(--blue-ink)}
 .button.primary{background:var(--ink);color:white;border-color:var(--ink)}
@@ -209,6 +210,7 @@ footer{border-top:1px solid var(--line);padding-bottom:20px}
 .citation-content{position:relative;padding:12px 20px;background:var(--soft);border-radius:7px;margin-bottom:15px}
 .citation-content>.button{position:absolute;right:14px;top:14px;min-height:32px;font-size:10px;padding:5px 10px}
 pre{font-family:var(--body-font);font-size:11px;line-height:1.7;overflow-x:auto;padding-right:105px;margin:0}
+#bibtex{white-space:pre-wrap;overflow-wrap:anywhere}
 #copy-status{font-size:11px;color:var(--blue-ink);min-height:16px}
 .footer-bottom{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:9px}
 .noscript-note{text-align:center;padding:20px;font-size:14px}
@@ -304,3 +306,4 @@ pre{font-family:var(--body-font);font-size:11px;line-height:1.7;overflow-x:auto;
 @media(max-width:760px){.affiliation-logos{gap:23px}.affiliation-meta img{width:94px}.affiliation-wisconsin img{width:135px}.affiliation-nyu img{width:88px}.affiliation-stanford img{width:113px}.observation-summary{gap:12px}.observation-summary>p{font-size:12px}.monkey-sketch{flex-basis:95px;width:95px}.correspondence{gap:25px}.correspondence address{gap:14px 25px}}
 @media(max-width:580px){.affiliation-logos{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:17px 30px;margin-top:20px}.affiliation-logos>a{justify-content:center;min-height:42px}.affiliation-logos sup{margin-top:7px;font-size:8px}.affiliation-meta img{width:98px}.affiliation-unit{font-size:7px}.affiliation-nyu img{width:92px}.work-note{font-size:8px;margin-top:15px}.sharpening-sketch{max-width:370px;margin-top:14px}.observation-summary{gap:18px}.observation-summary>p{font-size:12px}.monkey-sketch{flex-basis:106px;width:106px}.correspondence{flex-direction:column;gap:9px;padding-block:7px 20px}.correspondence address{gap:12px 25px}.correspondence address>span>span{font-size:10px}}
 @media(max-width:360px){.observation-summary{gap:12px}.monkey-sketch{flex-basis:87px;width:87px}}
+@media(max-width:580px){.hero-links{gap:10px}.hero-links>.button{flex:1;min-width:0;max-width:120px;gap:12px;padding-inline:12px}.hero-links>.text-link{flex-basis:100%;margin-top:4px}}
