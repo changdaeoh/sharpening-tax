@@ -13,7 +13,7 @@
   Sharon Li<sup>2</sup>
 </p>
 <p align="center">
-  <sup>1</sup>Meta Superintelligence Labs &nbsp; <sup>2</sup>University of Wisconsin–Madison &nbsp; <sup>3</sup>New York U &nbsp; <sup>4</sup>Stanford University
+  <sup>1</sup>Meta Superintelligence Labs &nbsp; <sup>2</sup>University of Wisconsin–Madison &nbsp; <sup>3</sup>New York University &nbsp; <sup>4</sup>Stanford University
   <br><sup>*</sup>Work done at Meta
 </p>
 <p align="center">
