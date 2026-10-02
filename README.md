@@ -1,17 +1,17 @@
 # Sharpening Tax in Post-Training
 
 <p align="center">
-  Changdae Oh<sup>1,2,*</sup>,
-  Qi Zeng<sup>1</sup>,
-  Qi Qi<sup>1</sup>,
-  Andrey Zhmoginov,
-  Deren Lei<sup>1</sup>,
-  Yun He<sup>1</sup>,
-  Hoang Phan<sup>1,3,*</sup>,
+  <a href="https://changdaeoh.github.io/">Changdae Oh</a><sup>1,2,*</sup>,
+  <a href="https://vickizeng.com/">Qi Zeng</a><sup>1</sup>,
+  <a href="https://qiqi-helloworld.github.io/">Qi Qi</a><sup>1</sup>,
+  <a href="https://azhmogin.github.io/">Andrey Zhmoginov</a>,
+  <a href="https://derenlei.com/">Deren Lei</a><sup>1</sup>,
+  <a href="https://heyunh2015.github.io/yunhe.github.io/">Yun He</a><sup>1</sup>,
+  <a href="https://viethoang1512.github.io/">Hoang Phan</a><sup>1,3,*</sup>,
   <br>
-  Hangoo Kang<sup>4</sup>,
-  Azalia Mirhoseini<sup>4</sup>,
-  Sharon Li<sup>2</sup>
+  <a href="https://hgkang02.github.io/">Hangoo Kang</a><sup>4</sup>,
+  <a href="https://www.azaliamirhoseini.com/">Azalia Mirhoseini</a><sup>4</sup>,
+  <a href="https://pages.cs.wisc.edu/~sharonli/">Sharon Li</a><sup>2</sup>
 </p>
 <p align="center">
   <sup>1</sup>Meta Superintelligence Labs &nbsp; <sup>2</sup>University of Wisconsin–Madison &nbsp; <sup>3</sup>New York University &nbsp; <sup>4</sup>Stanford University
@@ -19,7 +19,7 @@
 </p>
 <p align="center">
   <a href="https://changdaeoh.github.io/sharpening-tax/"><img src="https://img.shields.io/badge/Project-page-2a9d8f.svg" alt="Project page"></a>
-  <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv"></a> -->
+  <a href="https://arxiv.org/abs/2610.01509"><img src="https://img.shields.io/badge/arXiv-2610.01509-b31b1b.svg" alt="arXiv"></a>
 </p>
 
 <p align="center"><img src="assets/teaser.png" width="100%" alt="Sharpening Tax in Post-Training"></p>
@@ -87,7 +87,7 @@ If you find our work helpful, we would appreciate it if you could cite our paper
   title   = {Sharpening Tax in Post-Training},
   author  = {Oh, Changdae and Zeng, Qi and Qi, Qi and Zhmoginov, Andrey and Lei, Deren and
              He, Yun and Phan, Hoang and Kang, Hangoo and Mirhoseini, Azalia and Li, Sharon},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2610.01509},
   year    = {2026}
 }
 ```
