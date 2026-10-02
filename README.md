@@ -8,6 +8,7 @@
   Deren Lei<sup>1</sup>,
   Yun He<sup>1</sup>,
   Hoang Phan<sup>1,3,*</sup>,
+  <br>
   Hangoo Kang<sup>4</sup>,
   Azalia Mirhoseini<sup>4</sup>,
   Sharon Li<sup>2</sup>
